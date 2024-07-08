@@ -261,6 +261,16 @@ span{
     text-align: center;
     margin: 5rem 0;
 }
+/* Adjusted CSS for headings */
+.education h2,
+.services h2,
+.testimonials .heading,
+.contact h2 {
+    font-size: 4rem;
+    text-align: center;
+    margin: 5rem 0;
+}
+
 .education{
     padding: 100px 15px;
     background: var(--second-bg-color);
