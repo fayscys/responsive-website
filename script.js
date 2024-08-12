@@ -10,19 +10,25 @@ window.onscroll = () => {
         let height = sec.offsetHeight;
         let id = sec.getAttribute('id');
 
-        if(top >= offset && top < offset + height){
+        if (top >= offset && top < offset + height) {
             navLinks.forEach(links => {
                 links.classList.remove('active');
-                document.querySelector('header nav a [href*=' + id + ']').classList.add ('active')
-            })
+                document.querySelector('header nav a[href*=' + id + ']').classList.add('active');
+            });
         }
-    })
-}
-
-
-
+    });
+};
 
 menuIcon.onclick = () => {
     menuIcon.classList.toggle('bx-x');
     navbar.classList.toggle('active');
-}
+};
+
+document.querySelector('#contactForm').onsubmit = function(event) {
+    // Optional: Delay the form reset and alert to give time for the submission
+    setTimeout(function() {
+        document.getElementById('contactForm').reset(); // Clear the form
+        alert('Your form has been submitted successfully!'); // Show success message
+    }, 500); // Adjust the timing if necessary
+};
+
